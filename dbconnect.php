@@ -1,7 +1,7 @@
 <?php
 $host = '127.0.0.1:53542'; //'dedwards-cst323-azurewebapp.mysql.database.azure.com';
-$username = 'root';
-$password = '';
+$username = 'azure';
+$password = '6#vWHD_$';
 $db_name = 'contactmanagement';
 
 //$mysql_handler = mysql_connect($host, $username, $password);
