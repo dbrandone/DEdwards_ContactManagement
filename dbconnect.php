@@ -8,12 +8,12 @@ $db_name = 'contactmanagement';
 //mysql_select_db($db_name, $mysql_handler);
 
 //Initializes MySQLi
-$conn = mysqli_init();
-
+//$conn = mysqli_init();
+$connect = mysqli_real_connect(mysqli_init(), $host, $username, $password, $db_name, 53542, NULL);
 //mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
-mysqli_real_connect($conn, $host, $username, $password, $db_name, 53542, NULL);
+//mysqli_real_connect(mysqli_init(), $host, $username, $password, $db_name, 53542, NULL);
 
 //If connection failed, show the error
 if (mysqli_connect_errno())
