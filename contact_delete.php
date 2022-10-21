@@ -27,7 +27,7 @@ include 'dbconnect.php';
 
     <div class="container">
         <button class="btn btn-primary my-5">
-            <a href="view_contacts.php" class="text-light">Return to Contacts</a>
+            <a href="index.php" class="text-light">Return to Contacts</a>
         </button>
 
     </div>
