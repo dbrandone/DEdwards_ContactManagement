@@ -9,7 +9,7 @@ $db_name = 'contactmanagement';
 
 //Initializes MySQLi
 //$conn = mysqli_init();
-$connect = mysqli_real_connect(mysqli_init(), $host, $username, $password, $db_name, 53542, NULL);
+$connect = mysqli_real_connect($host, $username, $password, $db_name, 53542, NULL);
 //mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
