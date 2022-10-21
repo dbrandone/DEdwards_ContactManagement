@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $result=mysqli_query($connect,$query);
 
     if($result){
-        header('location:view_contacts.php');
+        header('location:index.php');
     }
     else{
         die(mysqli_error($connect));
