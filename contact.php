@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
         header('location:index.php');
     }
     else{
-        die(mysqli_error($connect));
+        die("Query failed"); //mysqli_error($connect));
     }
 }
 ?>
