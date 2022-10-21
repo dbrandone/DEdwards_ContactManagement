@@ -6,19 +6,21 @@ $query="SELECT * FROM contacts
         WHERE id=$id";
 $query_result=mysqli_query($connect,$query);
 $contact=mysqli_fetch_assoc($query_result);
-$name=$contact['name'];
+$first_name=$contact['first_name'];
+$last_name=$contact['last_name'];
 $organization=$contact['organization'];
 $email=$contact['email'];
 $phone=$contact['phone'];
 
 if(isset($_POST['submit'])){
-    $name=$_POST['name'];
+    $first_name=$_POST['first_name'];
+    $last_name=$_POST['last_name'];
     $organization=$_POST['organization'];
     $email=$_POST['email'];
     $phone=$_POST['phone'];
 
-    $query="UPDATE contacts 
-            SET id=$id,name='$name',organization='$organization',email='$email',phone='$phone'
+    $query="UPDATE contacts
+            SET id=$id,first_name='$first_name',last_name='$last_name',organization='$organization',email='$email',phone='$phone'
             WHERE id=$id";
     $result=mysqli_query($connect,$query);
 
@@ -45,8 +47,12 @@ if(isset($_POST['submit'])){
     <div class="container my-5">
         <form method="post">
             <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" placeholder="Enter Contact Name" name="name" value=<?php echo $name; ?> />
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="Enter First Name" name="first_name" value=<?php echo $first_name; ?> />
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter Last Name" name="last_name" value=<?php echo $last_name; ?> />
             </div>
             <div class="form-group">
                 <label>Organization</label>
