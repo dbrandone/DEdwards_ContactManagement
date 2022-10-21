@@ -1,13 +1,14 @@
 <?php
 include 'dbconnect.php';
 if(isset($_POST['submit'])){
-    $name=$_POST['name'];
+    $first_name=$_POST['first_name'];
+    $last_name=$_POST['last_name'];
     $organization=$_POST['organization'];
     $email=$_POST['email'];
     $phone=$_POST['phone'];
 
-    $query="insert into contacts (name,organization,email,phone) 
-            values('$name','$organization','$email','$phone')";
+    $query="insert into contacts (first_name,last_name,organization,email,phone)
+            values('$first_name','$last_name','$organization','$email','$phone')";
     $result=mysqli_query($connect,$query);
 
     if($result){
@@ -33,8 +34,12 @@ if(isset($_POST['submit'])){
     <div class="container my-5">
         <form method="post">
             <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" placeholder="Enter Contact Name" name="name">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="Enter First Name" name="first_name" />
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter Last Name" name="last_name" />
             </div>
             <div class="form-group">
                 <label>Organization</label>
