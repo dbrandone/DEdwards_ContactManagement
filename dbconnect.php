@@ -4,16 +4,16 @@ $username = 'root';
 $password = '';
 $db_name = 'contactmanagement';
 
-$mysql_handler = mysql_connect($host, $username, $password);
-mysql_select_db($db_name, $mysql_handler);
+//$mysql_handler = mysql_connect($host, $username, $password);
+//mysql_select_db($db_name, $mysql_handler);
 
 //Initializes MySQLi
-//$conn = mysqli_init();
+$conn = mysqli_init();
 
-//mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
-//mysqli_real_connect($conn, $host, $username, $password, $db_name, 53542, NULL, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, $host, $username, $password, $db_name, 53542, NULL, MYSQLI_CLIENT_SSL);
 
 //If connection failed, show the error
 if (mysqli_connect_errno())
