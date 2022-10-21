@@ -1,5 +1,5 @@
 <?php
-$host =  'localdb'; //'dedwards-cst323-azurewebapp.mysql.database.azure.com';
+$host =  'dedwards-cst323-azurewebapp.mysql.database.azure.com';
 $username = 'root';
 $password = '';
 $db_name = 'contactmanagement';
